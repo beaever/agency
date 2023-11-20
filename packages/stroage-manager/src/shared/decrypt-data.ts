@@ -1,6 +1,6 @@
-import ObjectReturnType from './decrypt-commonTypes';
-import DecryptDataModel from './decryptDataType';
-import DecryptObjectModel from './decryptObjectType';
+import ObjectReturnType from "./decrypt-commonTypes";
+import DecryptDataModel from "./decryptDataType";
+import DecryptObjectModel from "./decryptObjectType";
 
 type GetValueReturnType = number | string | null;
 type GetDateReturnType = number | null;
@@ -31,7 +31,7 @@ export default class DecryptData implements DecryptDataModel {
 
   getObject(key?: string): ObjectReturnType {
     try {
-      const parsedValue = JSON.parse((this.value ?? '').toString());
+      const parsedValue = JSON.parse((this.value ?? "").toString());
       return key ? parsedValue[key] ?? null : parsedValue;
     } catch (err) {
       console.error(`decrypt-data.ts in Error`);

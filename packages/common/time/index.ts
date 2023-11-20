@@ -1,1 +1,1 @@
-export { getHour } from './src/time';
+export { getHour } from "./src/time";

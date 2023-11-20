@@ -1,10 +1,10 @@
-import C from 'crypto-js';
-import DecryptData from './decrypt-data';
-import DecryptDataModel from './decryptDataType';
+import C from "crypto-js";
+import DecryptData from "./decrypt-data";
+import DecryptDataModel from "./decryptDataType";
 
-const splitter = '67DCCEFAFFED16363A21963ADD1FC30FD528A22D';
-const sk = 'ace51f98c5a61d4eb8fad30d2d009d792699a356';
-const ck = '8ab74da7842e9d5495e4e6495442872e7d2453d6';
+const splitter = "67DCCEFAFFED16363A21963ADD1FC30FD528A22D";
+const sk = "ace51f98c5a61d4eb8fad30d2d009d792699a356";
+const ck = "8ab74da7842e9d5495e4e6495442872e7d2453d6";
 
 // 암호화 함수
 export const enc = (props: string | number): string => {
@@ -17,20 +17,20 @@ export const enc = (props: string | number): string => {
   }`;
 
   // 이중 암호화
-  return C.AES.encrypt(C.AES.encrypt(decoding, ck ?? '').toString(), sk ?? '')
+  return C.AES.encrypt(C.AES.encrypt(decoding, ck ?? "").toString(), sk ?? "")
     .toString()
-    .replace(/\//gi, 'nsd-dec');
+    .replace(/\//gi, "nsd-dec");
 };
 
 /** @description 복호화 함수 */
 export const dec = (e: string): DecryptDataModel => {
   /** @description 이중 암호호된 데이터 복호화 */
   const doubleEncryptionDecrypt = C.AES.decrypt(
-    C.AES.decrypt(e.replace(/nsd-dec/gi, '/'), sk ?? '').toString(C.enc.Utf8),
-    ck ?? ''
+    C.AES.decrypt(e.replace(/nsd-dec/gi, "/"), sk ?? "").toString(C.enc.Utf8),
+    ck ?? "",
   )
     .toString(C.enc.Utf8)
-    .split(splitter ?? '');
+    .split(splitter ?? "");
 
   /** @description 실질적 데이터가 number인 경우 parseInt하여 전달 (암호화된 실질적 데이터) */
   const value = Number.isNaN(parseInt(doubleEncryptionDecrypt[0]))
