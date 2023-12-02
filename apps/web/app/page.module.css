@@ -59,15 +59,16 @@
   justify-content: space-between;
   align-items: center;
   width: auto;
-  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 48px;
 
   @media (min-width: 768px) {
     padding-top: 4rem;
     padding-bottom: 6rem;
   }
+
   @media (min-width: 1024px) {
     padding-top: 5rem;
     padding-bottom: 8rem;
@@ -94,7 +95,9 @@
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  transition:
+    background 200ms,
+    border 200ms;
 }
 
 .card span {
@@ -258,7 +261,7 @@
 }
 
 .code {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
   font-weight: 700;
 }
