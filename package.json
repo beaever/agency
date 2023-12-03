@@ -17,5 +17,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/beaever/agency.git",
+  "author": "beaever <thebeaever@gmail.com>",
+  "license": "MIT"
 }
