@@ -4,14 +4,15 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "storybook": "cd packages/components && yarn storybook"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "tsconfig": "*",
-    "turbo": "latest"
+    "turbo": "^1.10.14"
   },
   "name": "agency",
   "packageManager": "yarn@1.0.0",
