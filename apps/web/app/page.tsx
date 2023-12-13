@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card } from 'ui';
-// import Button from "components";
+// import {Button} from "components"
 import styles from './page.module.css';
 
 function Gradient({
