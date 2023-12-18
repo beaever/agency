@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card } from 'ui';
-// import {Button} from "components"
+// import Button from "components"
 import styles from './page.module.css';
 
 function Gradient({
@@ -53,6 +53,7 @@ const LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
+      {/* <Button></Button> */}
       <div className={styles.description}>
         <p>
           examples/basic&nbsp;
@@ -64,7 +65,7 @@ export default function Page(): JSX.Element {
             rel='noopener noreferrer'
             target='_blank'
           >
-            By{' '}
+            By
             <Image
               alt='Vercel Logo'
               className={styles.vercelLogo}
