@@ -6,14 +6,20 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "lint": {},
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
     "dev": {
+      "dependsOn": ["^dev", "^start"],
       "cache": false,
       "persistent": true
     },
     "storybook": {
-      "cache": false,
-      "persistent": true
+      "dependsOn": ["^storybook"],
+      "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["^deploy"]
     }
   }
 }

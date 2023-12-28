@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "exports": {
+    "./src/index.ts": "./src/index.ts"
+  },
   "scripts": {},
   "devDependencies": {
     "@types/crypto-js": "^4.1.2",
