@@ -1,5 +1,5 @@
 {
-  "name": "@agency/shared",
+  "name": "@agency/ui-kit",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,9 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@agency/shared": "workspace:*",
+    "@agency/storage-container": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^8.53.0",
-    "typescript": "^5.2.2"
+    "@repo/ui": "workspace:*"
   }
 }
