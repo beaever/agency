@@ -13,13 +13,13 @@
   "dependencies": {
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@agency/storage-container": "workspace:*"
   },
   "devDependencies": {
     "@agency/shared": "workspace:*",
-    "@agency/storage-container": "workspace:*",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/ui": "workspace:*",

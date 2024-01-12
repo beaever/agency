@@ -4,6 +4,7 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
+  transpilePackages: ['@agency/shared'],
 };
 
 module.exports = nextConfig;
