@@ -1,0 +1,15 @@
+{
+  "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@type": ["src/types/*"],
+      "@/shared": ["src/shared/*"],
+      "@/constant": ["src/constant/*"]
+    }
+  },
+  "include": ["src", "turbo"],
+  "exclude": ["node_modules", "dist"]
+}

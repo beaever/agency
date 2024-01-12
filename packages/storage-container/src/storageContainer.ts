@@ -1,7 +1,7 @@
-import { dec, enc, encSha256 } from "./shared/passport";
-import DecryptData from "./shared/decrypt-data";
-import DecryptDataModel from "./shared/decryptDataType";
-import { getHour } from "./shared/time";
+import { dec, enc, encSha256 } from './shared/passport';
+import DecryptData from './types/decrypt-data';
+import { DecryptDataModel } from './types/decryptDataType';
+import { getHour } from '@agency/shared/time';
 
 /** @description INITALVALUE 비어있는 데이터 */
 const INITAL_EMPTY_DECRYPT_DATA = new DecryptData({
@@ -17,10 +17,10 @@ class StorageManager {
   /** @description 로컬 스토리지 데이터 암호화로 저장 */
   set(
     targetKey: string,
-    targetValue: string | number | Object | Array<any>,
+    targetValue: string | number | Object | Array<any>
   ): void {
     const convertValue =
-      typeof targetValue === "object"
+      typeof targetValue === 'object'
         ? JSON.stringify(targetValue)
         : targetValue;
     const key = encSha256(targetKey);
@@ -70,4 +70,4 @@ class StorageManager {
 /** @description localStorage를 암호화를 하는 utill */
 const storageManager = new StorageManager();
 
-export default storageManager;
+export { storageManager };
