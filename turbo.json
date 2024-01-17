@@ -2,9 +2,16 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
+    "tsc": {
+      "dependsOn": ["@agency/shared#build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "main:build": {
+      "dependsOn": ["tsc", "build"]
     },
     "lint": {
       "dependsOn": ["^lint"]

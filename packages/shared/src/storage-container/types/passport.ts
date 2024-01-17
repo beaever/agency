@@ -1,7 +1,7 @@
 import C from 'crypto-js';
-import DecryptData from '@type/decrypt-data';
-import { DecryptDataModel } from '@type/decryptDataType';
-import { splitter, ck, sk } from '@constant/constant';
+import DecryptData from './decrypt-data';
+import { DecryptDataModel } from './decryptDataType';
+import { splitter, ck, sk } from '../constant/constant';
 
 // 암호화 함수
 export const enc = (props: string | number): string => {

@@ -15,8 +15,7 @@
     "react": "^18",
     "react-dom": "^18",
     "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@agency/storage-container": "workspace:*"
+    "@emotion/styled": "^11.11.0"
   },
   "devDependencies": {
     "@agency/shared": "workspace:*",

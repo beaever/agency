@@ -1,4 +1,4 @@
-import { ObjectReturnType } from './decrypt-commonTypes';
+import ObjectReturnType from './decrypt-commonTypes';
 
 export interface DecryptDataModel {
   getValue: () => string | number | null;

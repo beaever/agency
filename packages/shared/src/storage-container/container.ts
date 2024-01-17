@@ -1,7 +1,7 @@
-import { dec, enc, encSha256 } from './shared/passport';
+import { dec, enc, encSha256 } from './types/passport';
 import DecryptData from './types/decrypt-data';
 import { DecryptDataModel } from './types/decryptDataType';
-import { getHour } from '@agency/shared/time';
+import { getHour } from '../time';
 
 /** @description INITALVALUE 비어있는 데이터 */
 const INITAL_EMPTY_DECRYPT_DATA = new DecryptData({
@@ -13,7 +13,7 @@ const INITAL_EMPTY_DECRYPT_DATA = new DecryptData({
 /**
  * @returns maderi-token : { access : string , refresh : string } : API 토큰
  */
-class StorageManager {
+class StorageContainer {
   /** @description 로컬 스토리지 데이터 암호화로 저장 */
   set(
     targetKey: string,
@@ -68,6 +68,6 @@ class StorageManager {
 }
 
 /** @description localStorage를 암호화를 하는 utill */
-const storageManager = new StorageManager();
+const Container = new StorageContainer();
 
-export { storageManager };
+export { Container };
