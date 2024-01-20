@@ -13,7 +13,7 @@
     "react-dom": "^18",
     "next": "14.0.4",
     "@agency/shared": "workspace:*",
-    "@agency/ui": "workspace:*"
+    "@agency/components": "workspace:*"
   },
   "devDependencies": {
     "@agency/eslint-config": "workspace:*",

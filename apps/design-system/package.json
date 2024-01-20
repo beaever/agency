@@ -21,7 +21,7 @@
     "@agency/shared": "workspace:*",
     "@agency/eslint-config": "workspace:*",
     "@agency/typescript-config": "workspace:*",
-    "@agency/ui": "workspace:*",
+    "@agency/components": "workspace:*",
     "@storybook/addon-essentials": "^7.6.6",
     "@storybook/addon-interactions": "^7.6.6",
     "@storybook/addon-links": "^7.6.6",
