@@ -1,4 +1,4 @@
-import ObjectReturnType from './decrypt-commonTypes';
+import { ObjectReturnType } from './decrypt-commonTypes';
 import {
   DecryptDataModel,
   GetDateReturnType,
@@ -7,7 +7,7 @@ import {
 } from './decryptDataType';
 import DecryptObjectModel from './decryptObjectType';
 
-export default class DecryptData implements DecryptDataModel {
+export class DecryptData implements DecryptDataModel {
   value: number | string | null;
   date: number | null;
   href: string | null;

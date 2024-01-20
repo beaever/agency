@@ -1,7 +1,7 @@
 import { dec, enc, encSha256 } from './types/passport';
-import DecryptData from './types/decrypt-data';
+import { DecryptData } from './types/decrypt-data';
 import { DecryptDataModel } from './types/decryptDataType';
-import { getHour } from '../time';
+import { getHour } from '../getTime/getTime';
 
 /** @description INITALVALUE 비어있는 데이터 */
 const INITAL_EMPTY_DECRYPT_DATA = new DecryptData({

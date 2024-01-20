@@ -1,9 +1,9 @@
 import C from 'crypto-js';
-import DecryptData from './decrypt-data';
+import { DecryptData } from './decrypt-data';
 import { DecryptDataModel } from './decryptDataType';
 import { splitter, ck, sk } from '../constant/constant';
 
-// 암호화 함수
+/** @description 암호화 함수 */
 export const enc = (props: string | number): string => {
   /** @description number 데이터의 경우 to String 필요 */
   const convertProps = String(props);
