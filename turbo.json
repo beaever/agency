@@ -2,6 +2,10 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
+    "build:package": {
+      "dependsOn": ["@agency/shared#build", "@agency/components"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
     "tsc": {
       "dependsOn": ["@agency/shared#build"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
