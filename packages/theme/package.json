@@ -3,10 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
+    "build": "swc src --out-dir dist && tsc",
+    "lint": "eslint . --max-warnings=0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.11.4",
@@ -15,8 +13,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
-    "eslint-config": "*",
-    "tsconfig": "*"
+    "@agency/eslint-config": "workspace:*",
+    "@agency/typescript-config": "workspace:*"
   },
   "devDependencies": {
     "@swc/cli": "^0.3.10",

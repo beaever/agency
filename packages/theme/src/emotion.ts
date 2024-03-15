@@ -83,7 +83,19 @@ declare module '@emotion/react' {
     transparent: 'transparent';
   }
 
-  interface FontsProps {
+  export interface OpacityProps {
+    // white
+    white30: string;
+    white50: string;
+    white70: string;
+
+    // black
+    black30: string;
+    black50: string;
+    black70: string;
+  }
+
+  export interface FontsProps {
     size: {
       size40: string;
       size35: string;
@@ -122,5 +134,37 @@ declare module '@emotion/react' {
       detail1: string;
       detail2: string;
     };
+  }
+
+  export interface TextColorProps {
+    link: string;
+    active: string;
+    default: string;
+    error: string;
+    white: string;
+    placeholder: string;
+    disabled: string;
+  }
+
+  export interface ElementColorProps {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    quaternary: string;
+    quinary: string;
+    background: string;
+    text: string;
+  }
+
+  export interface ThemeColorProps {
+    light: ElementColorProps;
+    dark: ElementColorProps;
+  }
+
+  export interface ColorsProps {
+    text: TextColorProps;
+    lightElement: ElementColorProps;
+    darkElement: ElementColorProps;
+    opacityElement: OpacityProps;
   }
 }

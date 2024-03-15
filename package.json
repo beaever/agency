@@ -1,28 +1,32 @@
 {
+  "name": "agency",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "storybook": "cd packages/components && yarn storybook"
+    "build:design-system": "pnpm exec turbo build --filter=@itsm/design-system",
+    "build:shared": "pnpm exec turbo build --filter=@itsm/shared",
+    "build:components": "pnpm exec turbo build --filter=@itsm/components",
+    "build:theme": "pnpm exec turbo build --filter=@itsm/theme",
+    "prepare": "husky install",
+    "storybook": "turbo storybook",
+    "graph": "turbo run build lint --graph=graph.png"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "tsconfig": "*",
-    "turbo": "^1.10.14"
+    "@agency/eslint-config": "workspace:*",
+    "@agency/typescript-config": "workspace:*",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
   },
-  "name": "agency",
-  "packageManager": "yarn@1.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/beaever/agency.git",
-  "author": "beaever <thebeaever@gmail.com>",
-  "license": "MIT"
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
 }

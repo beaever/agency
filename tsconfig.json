@@ -2,5 +2,5 @@
   "compilerOptions": {
     "jsx": "react"
   },
-  "extends": "tsconfig/base.json"
+  "extends": "@agency/typescript-config/base.json"
 }
