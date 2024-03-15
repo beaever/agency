@@ -1,5 +1,6 @@
 {
   "name": "@agency/eslint-config",
+  "license": "MIT",
   "version": "0.0.0",
   "private": true,
   "files": [
@@ -7,13 +8,16 @@
     "next.js",
     "react-internal.js"
   ],
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.10.0"
+  },
   "devDependencies": {
-    "@vercel/style-guide": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vercel/style-guide": "^5.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-config-turbo": "^1.10.12",
-    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-only-warn": "^1.1.0",
-    "@typescript-eslint/parser": "^6.11.0",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
     "typescript": "^5.2.2"
   }
 }

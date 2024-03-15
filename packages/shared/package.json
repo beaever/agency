@@ -1,15 +1,12 @@
 {
   "name": "@agency/shared",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./dist/bundle.js",
-  "exports": {
-    "./time": "./src/time.ts"
-  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "./index.ts",
+  "types": "./index.ts",
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -cw",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate:shared": "turbo gen shared"
   },
   "devDependencies": {
     "@agency/eslint-config": "workspace:*",
