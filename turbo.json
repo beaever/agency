@@ -3,6 +3,14 @@
   "globalDependencies": [".env"],
   "globalEnv": ["NODE_ENV", "NEXT_PUBLIC_BASE_URL"],
   "pipeline": {
+    "build:package": {
+      "dependsOn": ["@agency/shared#build", "@agency/components"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "tsc": {
+      "dependsOn": ["@agency/shared#build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
     "build": {
       "outputMode": "new-only",
       "dependsOn": ["^build"],

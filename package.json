@@ -6,13 +6,7 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "build:design-system": "pnpm exec turbo build --filter=@itsm/design-system",
-    "build:shared": "pnpm exec turbo build --filter=@itsm/shared",
-    "build:components": "pnpm exec turbo build --filter=@itsm/components",
-    "build:theme": "pnpm exec turbo build --filter=@itsm/theme",
-    "prepare": "husky install",
-    "storybook": "turbo storybook",
-    "graph": "turbo run build lint --graph=graph.png"
+    "workspace": "turbo gen workspace"
   },
   "devDependencies": {
     "@agency/eslint-config": "workspace:*",

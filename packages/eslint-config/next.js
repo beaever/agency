@@ -32,10 +32,7 @@ module.exports = {
     'node_modules/',
   ],
   rules: {
-    'no-unused-vars': [
-      'warn',
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
-    ],
+    'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'consistent-return': 'off',
     '@typescript-eslint/no-explicit-any': 'error',

@@ -8,10 +8,14 @@
     "lint": "eslint .",
     "generate:shared": "turbo gen shared"
   },
-  "dependencies": {},
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "eslint-config-custom": "*",
-    "tsconfig": "*"
+    "@agency/eslint-config": "workspace:*",
+    "@agency/typescript-config": "workspace:*",
+    "@swc/cli": "^0.1.64",
+    "@swc/core": "^1.3.105",
+    "@types/crypto-js": "^4.2.1",
+    "eslint": "^8.53.0",
+    "rollup": "^4.9.6",
+    "typescript": "^5.2.2"
   }
 }
