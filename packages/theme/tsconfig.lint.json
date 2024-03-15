@@ -1,0 +1,8 @@
+{
+  "extends": "@agency/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src", "turbo"],
+  "exclude": ["node_modules", "dist"]
+}
