@@ -1,0 +1,26 @@
+{
+  "name": "theme",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Add dev script here'",
+    "build": "echo 'Add build script here'",
+    "test": "echo 'Add test script here'",
+    "lint": "echo 'Add lint script here'"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "eslint-config": "*",
+    "tsconfig": "*"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.10",
+    "@swc/core": "^1.4.8",
+    "typescript": "^5.4.2"
+  }
+}
