@@ -82,4 +82,45 @@ declare module '@emotion/react' {
     // transparent
     transparent: 'transparent';
   }
+
+  interface FontsProps {
+    size: {
+      size40: string;
+      size35: string;
+      size26: string;
+      size18: string;
+      size16: string;
+      size14: string;
+      size12: string;
+    };
+    weight: {
+      weight100: string;
+      weight200: string;
+      weight300: string;
+      weight400: string;
+      weight500: string;
+      weight600: string;
+      weight700: string;
+      weight800: string;
+      weight900: string;
+    };
+    style: {
+      heading1: string;
+      heading2: string;
+      title1: string;
+      title2: string;
+      title3: string;
+      subtitle1: string;
+      subtitle2: string;
+      subtitle3: string;
+      body1: string;
+      body2: string;
+      body3: string;
+      body4: string;
+      body5: string;
+      body6: string;
+      detail1: string;
+      detail2: string;
+    };
+  }
 }
