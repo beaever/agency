@@ -1,0 +1,17 @@
+{
+  "extends": "@agency/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "react": ["node_modules/@types/react"]
+    },
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "types": ["@agency/theme/node_modules/@emotion/react/types/css-prop"],
+    "jsxImportSource": "@agency/theme/node_modules/@emotion/react",
+    "jsx": "preserve"
+  },
+  "include": ["/src", "/custom.d.ts", "/styles.d.ts", "svg.d.ts", "@agency/theme/src/emotion.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
