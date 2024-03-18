@@ -1,7 +1,12 @@
 {
-  "name": "theme",
+  "name": "@agency/theme",
   "version": "0.0.0",
   "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "swc src --out-dir dist && tsc",
     "lint": "eslint . --max-warnings=0"
