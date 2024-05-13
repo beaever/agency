@@ -3,10 +3,13 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "dev": "turbo dev --filter=@agency/docs",
+    "dev:web": "turbo dev --filter=@agency/web",
+    "dev:docs": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "workspace": "turbo gen workspace"
+    "workspace": "turbo gen workspace",
+    "storybook": "turbo storybook --filter=@agency/design-system"
   },
   "devDependencies": {
     "@agency/eslint-config": "workspace:*",
