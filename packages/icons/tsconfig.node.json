@@ -3,14 +3,14 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "types": ["@agency/theme/node_modules/@emotion/react/types/css-prop"],
-    "jsxImportSource": "@agency/theme/node_modules/@emotion/react",
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "react": ["node_modules/@types/react"]
-    }
-  }
+    "types": [
+      "@agency/theme/node_modules/@emotion/react/types/css-prop",
+      "@agency/theme/node_modules/@emotion/react/types/jsx-namespace",
+      "vite-plugin-svgr/client"
+    ],
+    "jsxImportSource": "@agency/theme/node_modules/@emotion/react"
+  },
+  "include": ["vite.config.ts", "custom.d.ts", "styles.d.ts", "svg.d.ts"]
 }
