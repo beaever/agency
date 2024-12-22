@@ -1,8 +1,16 @@
 {
   "extends": "@agency/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@type/*": ["src/types/*"]
+    },
+    "types": ["@emotion/react/types/css-prop"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react"
   },
-  "include": ["src", "turbo"],
+  "include": ["src", "turbo", "styles.d.ts", "**/*.ts", "**/*.tsx", "@agency/theme/src/emotion.ts", "custom.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

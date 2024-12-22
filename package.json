@@ -3,9 +3,11 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev --filter=@agency/docs",
-    "dev:web": "turbo dev --filter=@agency/web",
-    "dev:docs": "turbo dev",
+    "build:portfolio": "turbo build --filter=@agency/portfolio",
+    "build:components": "turbo build --filter=@agency/components",
+    "build:theme": "turbo build --filter=@agency/theme",
+    "dev": "turbo dev",
+    "dev:portfolio": "turbo dev --filter=@agency/portfolio",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "workspace": "turbo gen workspace",
@@ -18,9 +20,10 @@
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@9.0.6",
   "engines": {
-    "node": ">=18"
+    "node": ">=20",
+    "pnpm": ">=9.x"
   },
   "dependencies": {
     "winston": "^3.11.0",
