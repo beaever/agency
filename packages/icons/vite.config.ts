@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react-swc';
-import svgr from '@svgr/rollup';
+import svgr from 'vite-plugin-svgr';
 import dts from 'vite-plugin-dts';
 import * as packageJson from './package.json';
 
@@ -16,17 +16,25 @@ const makeExternalPredicate = (externalArr: string[]) => {
 const externals = makeExternalPredicate(Object.keys(packageJson.peerDependencies));
 
 export default defineConfig({
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
   plugins: [
-    react(),
+    react({
+      jsxImportSource: '@agency/theme/node_modules/@emotion/react',
+    }),
     dts({
       insertTypesEntry: true, // 컴포넌트 타입 생성
     }),
     svgr(),
   ],
+  optimizeDeps: {
+    force: true,
+  },
+
   build: {
-    outDir: 'dist',
     lib: {
-      name: '@itsm/icons',
+      name: '@agency/icons',
       entry: [path.resolve(__dirname, 'src', 'index.ts'), path.resolve(__dirname, 'src', 'components', 'component.ts')],
       formats: ['es', 'cjs'],
     },
@@ -35,8 +43,8 @@ export default defineConfig({
       output: {
         globals: {
           react: 'React',
-          '@emotion/react/jsx-runtime': 'jsxRuntime',
-          '@emotion/react': 'React',
+          '@agnecy/theme/node_modules/@emotion/react/jsx-runtime': 'jsxRuntime',
+          '@agency/theme/node_modules/@emotion/react': 'React',
         },
       },
       input: {
