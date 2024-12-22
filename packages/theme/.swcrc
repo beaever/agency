@@ -1,10 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/swcrc",
+
   "jsc": {
-    "target": "es2016",
-    "loose": false,
-    "externalHelpers": false,
-    "keepClassNames": false,
     "parser": {
       "syntax": "typescript",
       "tsx": true,
@@ -14,14 +11,18 @@
     "transform": {
       "decoratorMetadata": true,
       "legacyDecorator": true
-    }
+    },
+    "target": "es2016",
+    "loose": false,
+    "externalHelpers": false,
+    "keepClassNames": false
   },
   "module": {
     "type": "commonjs",
     "strict": false,
     "strictMode": true,
     "noInterop": false,
-    "lazy": true
+    "lazy": false
   },
   "sourceMaps": true,
   "minify": true,

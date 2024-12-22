@@ -167,4 +167,6 @@ declare module '@emotion/react' {
     darkElement: ElementColorProps;
     opacityElement: OpacityProps;
   }
+
+  export type FontTypograpyNameType = keyof FontsProps['style'];
 }

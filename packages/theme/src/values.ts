@@ -93,7 +93,7 @@ export const opacity: OpacityProps = {
   black70: 'background-color: #1A1A1A; opacity: 70%;',
 };
 /** @description 서체 */
-export const Fonts: FontsProps = {
+export const fonts: FontsProps = {
   // font-size
   // [size숫자] 보다 small, medium, large, 이런식으로 구분하는게 나을거 같기도 함
   size: {

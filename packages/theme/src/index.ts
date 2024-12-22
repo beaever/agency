@@ -1,6 +1,92 @@
-import './emotion';
+import {
+  ThemeProvider,
+  ThemeProviderProps,
+  css,
+  useTheme,
+  ArrayClassNamesArg,
+  ArrayInterpolation,
+  CSSObject,
+  CacheProvider,
+  ClassNames,
+  ClassNamesArg,
+  ClassNamesContent,
+  ClassNamesProps,
+  ColorsProps,
+  ComponentSelector,
+  DistributiveOmit,
+  ElementColorProps,
+  EmotionCache,
+  FunctionInterpolation,
+  Global,
+  GlobalProps,
+  Interpolation,
+  Keyframes,
+  PaletteProps,
+  PropsOf,
+  SerializedStyles,
+  TextColorProps,
+  Theme,
+  ThemeContext,
+  WithTheme,
+  jsx,
+  keyframes,
+  withEmotionCache,
+  withTheme,
+  FontsProps,
+  OpacityProps,
+  ThemeColorProps,
+  FontTypograpyNameType,
+} from '@emotion/react';
 
-export * from '@emotion/react';
-export * from '@emotion/react/jsx-runtime';
-export * from './colors';
-export * from './values';
+import { colors } from './colors';
+import { fonts, opacity, palette } from './values';
+
+export {
+  colors,
+  fonts,
+  opacity,
+  palette,
+  ThemeProvider,
+  css,
+  useTheme,
+  CacheProvider,
+  ClassNames,
+  Global,
+  ThemeContext,
+  jsx,
+  keyframes,
+  withEmotionCache,
+};
+
+export type {
+  FontTypograpyNameType,
+  ThemeProviderProps,
+  ArrayClassNamesArg,
+  ArrayInterpolation,
+  CSSObject,
+  WithTheme,
+  withTheme,
+  GlobalProps,
+  Interpolation,
+  Keyframes,
+  PaletteProps,
+  PropsOf,
+  SerializedStyles,
+  TextColorProps,
+  Theme,
+  ClassNamesArg,
+  ClassNamesContent,
+  ClassNamesProps,
+  ColorsProps,
+  ComponentSelector,
+  DistributiveOmit,
+  ElementColorProps,
+  EmotionCache,
+  FunctionInterpolation,
+
+  /** @description emotion/react/jsx-runtime 의 EmotionJSX 타입  */
+  JSX,
+  FontsProps,
+  OpacityProps,
+  ThemeColorProps,
+};
