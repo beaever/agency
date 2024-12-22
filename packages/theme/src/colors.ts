@@ -1,9 +1,4 @@
-import {
-  TextColorProps,
-  ElementColorProps,
-  ColorsProps,
-  OpacityProps,
-} from '@emotion/react';
+import { TextColorProps, ElementColorProps, ColorsProps, OpacityProps } from '@emotion/react';
 import { palette, opacity } from './values';
 
 const text: TextColorProps = {
@@ -38,9 +33,11 @@ const darkElement: ElementColorProps = {
 
 const opacityElement: OpacityProps = opacity;
 
-export const colors: ColorsProps = {
+const colors: ColorsProps = {
   text,
   lightElement,
   darkElement,
   opacityElement,
 };
+
+export { colors };
