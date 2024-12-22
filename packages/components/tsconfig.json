@@ -1,8 +1,23 @@
 {
   "extends": "@agency/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "module": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleDetection": "force",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "react": ["./node_modules/@types/react"],
+      "@/*": ["src/*"],
+      "@type/*": ["src/types/*"]
+    },
+    "types": ["@agency/theme/node_modules/@emotion/react/types/css-prop"],
+    "jsxImportSource": "@agency/theme/node_modules/@emotion/react"
   },
-  "include": ["src"],
+  "include": ["src", "**/*.ts", "**/*.tsx", "@agency/theme/src/emotion.ts", "custom.d.ts", "styles.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

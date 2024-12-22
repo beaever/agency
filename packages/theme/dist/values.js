@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Fonts = exports.opacity = exports.palette = void 0;
+exports.fonts = exports.opacity = exports.palette = void 0;
 exports.palette = {
     red10: '#FFF7F7',
     red20: '#FFE7E7',
@@ -82,7 +82,7 @@ exports.opacity = {
     black50: 'background-color: #1A1A1A; opacity: 50%;',
     black70: 'background-color: #1A1A1A; opacity: 70%;',
 };
-exports.Fonts = {
+exports.fonts = {
     size: {
         size40: 'font-size: 40px;',
         size35: 'font-size: 52px;',

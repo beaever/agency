@@ -30,9 +30,10 @@ const darkElement = {
     text: values_1.palette.gray10,
 };
 const opacityElement = values_1.opacity;
-exports.colors = {
+const colors = {
     text,
     lightElement,
     darkElement,
     opacityElement,
 };
+exports.colors = colors;

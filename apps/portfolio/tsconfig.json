@@ -1,0 +1,32 @@
+{
+  "extends": "@agency/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "react": ["node_modules/@types/react"],
+      "@/*": ["src/*"],
+      "@components": ["src/components/*"],
+      "@hooks": ["src/hooks/*"],
+      "@styles": ["src/styles/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "types": ["@agency/theme/node_modules/@emotion/react/types/css-prop"],
+    "jsxImportSource": "@agency/theme/node_modules/@emotion/react"
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "@agency/theme/src/emotion.ts",
+    "styles.d.ts",
+    "@agency/shared/query",
+    "src/types/socket/socket.s",
+    "utils/cli.js"
+  ],
+  "exclude": ["node_modules"]
+}
